@@ -38,7 +38,14 @@ public class Main
             {
                 if(affix.equals("pptx"))
                 {
-                    success = PPTX.to_image(input_file_path);
+                    try
+                    {
+                        success = PPTX.to_image(input_file_path, image_file_path);
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
                 }
                 else
                 {
